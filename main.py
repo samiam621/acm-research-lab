@@ -14,7 +14,6 @@ def main():
         print(f"\n{model}")
         try:
             res = get_response(model, prompt) #json
-            print(res)
             with open(f"response_{model.replace('/', '_')}.txt", "w") as f:
                 json.dump(res, f, indent=2)
             try:
