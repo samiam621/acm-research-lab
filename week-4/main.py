@@ -1,6 +1,8 @@
 import sys
 import requests
 import json
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent)) #shared config.py/open_api.py live at the repo root
 from open_api import MODELS, get_response
 
 

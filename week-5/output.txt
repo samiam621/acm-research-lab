@@ -1,0 +1,33 @@
+Question: What does it mean for a model to be simulatable?
+
+Retrieved (16 chunks indexed):
+  [0.709] Simulatability is transparency at the level of the whole model: a person can take the inputs and parameters and step through every calculation in a reasonable amount of time.
+  [0.475] Trust is one reason people want interpretability. Trust can mean confidence that the model performs well, or comfort handing control to the model in the specific cases where it tends to be right.
+  [0.426] Interpretability has no single agreed definition. Papers use the word to mean different things, so claims that one model is "more interpretable" than another are often not comparable.
+
+Answer with retrieved context:
+The context defines simulability as “transparency at the level of the whole model: a person can take the inputs and parameters and step through every calculation in a reasonable amount of time.” So a model is simulatable when you can manually follow its internal computations—using the given inputs and parameters—and verify each step of the calculation within a practical timeframe. If this isn’t possible, the model isn’t simulatable.
+
+Answer without context:
+You have asked a great question about the concept of **simulatability** in the context of machine learning and statistical modeling. Let me explore what this term means and why it matters.
+
+## 1. **What is a model?**
+
+In statistics and machine learning, a **model** is a mathematical representation of a relationship between variables. It captures the patterns in data and can be used for predictions, inference, and decision-making.
+
+## 2. **What does simulatable mean?**
+
+### a. **General definition**
+When we say a model is **simulatable**, we mean that we can generate new data from it, or predict the behavior of future observations, following the same process that generated the original data.
+
+### b. **Key aspects:**
+1. **Randomness handling**: It can handle randomness/stochasticity
+2. **Full predictive capabilities**: Can generate predictions for any input
+3. **Data generation**: Can produce new data that follows the same distribution
+
+### c. **Examples of simulatable models:**
+- **Random forests**: Can simulate new predictions by averaging many decision trees
+- **Neural networks**: Can simulate new outputs for given inputs
+- **Time series models**: Can predict future values based on past data
+
+### d. **Contrast with

@@ -1,16 +1,18 @@
 import requests
 import json
-from config import OPEN_ROUTER_KEY
+from config import Config
 
 
 API_URL = "https://openrouter.ai/api/v1/chat/completions"
 MODELS = (
-    "nvidia/nemotron-3.5-lightning:free",
-    "cohere/north-mini-code:free",
+    "nvidia/nemotron-3.5-lightning:free", #chooses the retrival pipeline
+    "cohere/north-mini-code:free", #generates the code using retrieved context
 )
 
 
 def get_response(model: str, prompt: str) -> str:
+    config = Config()
+    OPEN_ROUTER_KEY = config.OPEN_ROUTER_KEY
     if not OPEN_ROUTER_KEY:
         raise RuntimeError("Set OPEN_ROUTER_KEY in your .env file before running.")
 

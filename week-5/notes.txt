@@ -1,0 +1,31 @@
+Interpretability has no single agreed definition. Papers use the word to mean different things, so claims that one model is "more interpretable" than another are often not comparable.
+
+Trust is one reason people want interpretability. Trust can mean confidence that the model performs well, or comfort handing control to the model in the specific cases where it tends to be right.
+
+Causality is another motivation. Researchers hope that inspecting a model fit on observational data will suggest real causal relationships worth testing, even though supervised models only learn correlations.
+
+Transferability matters because deployment environments differ from training data. Humans generalize to new settings far better than models, and an interpretable model may reveal when it will break under distribution shift.
+
+Informativeness means an explanation gives a human useful information for their own decision, even if it does not reveal how the model works internally.
+
+Fair and ethical decision-making is a motivation when models affect people, for example in lending or criminal justice. People want to check that decisions are not based on protected attributes and that they can be contested.
+
+Simulatability is transparency at the level of the whole model: a person can take the inputs and parameters and step through every calculation in a reasonable amount of time.
+
+Decomposability is transparency at the level of parts: each input, parameter, and calculation has an intuitive explanation, such as a weight in a linear model meaning the strength of association with the output.
+
+Algorithmic transparency is transparency at the level of the training algorithm, for example knowing that a linear model's loss is convex and training will reach a unique solution.
+
+Post-hoc interpretability extracts information from a model after it has been trained, without requiring that the model be transparent. Humans explain themselves this way too.
+
+Text explanations are a post-hoc method where a second model is trained to generate natural-language justifications for the first model's predictions.
+
+Visualization is a post-hoc method, such as projecting learned representations into two dimensions with t-SNE or showing which input pixels most activate a neuron.
+
+Local explanations describe the model's behavior near one particular input, such as a saliency map showing which parts of an image changed the prediction most.
+
+Explanation by example shows the training examples the model considers most similar to a new input, similar to how a doctor might refer to past cases.
+
+Linear models are not automatically more interpretable than deep networks. With many features or heavy feature engineering, a linear model loses simulatability and decomposability.
+
+Post-hoc explanations can mislead. An explanation optimized to be convincing to humans may not reflect what the model actually computes.

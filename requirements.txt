@@ -1,2 +1,7 @@
 requests
 python-dotenv
+faiss-cpu
+numpy
+sentence-transformers
+# /all-minilm-l6-v2 --fast,lightweight, 384 dimensions
+# /all-mpnet-base-v2 --more accurate, 768 dimensions
